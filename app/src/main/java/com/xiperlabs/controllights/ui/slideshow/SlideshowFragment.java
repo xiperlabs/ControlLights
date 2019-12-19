@@ -1,4 +1,4 @@
-package com.xiperlabs.controllights.ui.slideshow;
+package com.xiperlabs.ventas.ui.slideshow;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,7 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
-import com.xiperlabs.controllights.R;
+import com.xiperlabs.ventas.R;
 
 public class SlideshowFragment extends Fragment {
 

@@ -1,4 +1,4 @@
-package com.xiperlabs.controllights;
+package com.xiperlabs.ventas;
 
 import org.junit.Test;
 

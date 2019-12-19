@@ -1,4 +1,4 @@
-package com.xiperlabs.controllights.ui.gallery;
+package com.xiperlabs.ventas.ui.gallery;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

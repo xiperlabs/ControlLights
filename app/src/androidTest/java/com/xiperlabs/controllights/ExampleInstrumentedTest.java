@@ -1,4 +1,4 @@
-package com.xiperlabs.controllights;
+package com.xiperlabs.ventas;
 
 import android.content.Context;
 import androidx.test.platform.app.InstrumentationRegistry;

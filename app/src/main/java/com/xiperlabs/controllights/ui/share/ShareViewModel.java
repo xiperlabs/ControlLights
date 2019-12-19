@@ -1,4 +1,4 @@
-package com.xiperlabs.controllights.ui.share;
+package com.xiperlabs.ventas.ui.share;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
