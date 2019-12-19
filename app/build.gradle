@@ -11,11 +11,41 @@ android {
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+    dataBinding {
+        enabled = true
+    }
+    signingConfigs {
+        debug {
+            storeFile file('xiperlabs.jks')
+            storePassword 'xiperlabs2019'
+            keyAlias 'xiperlabs'
+            keyPassword 'xiperlabs2019'
         }
+        release {
+            storeFile file('xiperlabs.jks')
+            storePassword 'xiperlabs2019'
+            keyAlias 'xiperlabs'
+            keyPassword 'xiperlabs2019'
+        }
+    }
+    buildTypes {
+        debug {
+            buildConfigField "String", "SERVER_URL", '"http://192.168.100.3:5000/ventas/"'
+            signingConfig signingConfigs.debug
+        }
+        release {
+            buildConfigField "String", "SERVER_URL", '"http://www.queretaroinformado.com/ventas/"'
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            ndk {
+                abiFilters "armeabi-v7a"
+            }
+            signingConfig signingConfigs.release
+        }
+    }
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
     }
 }
 
@@ -31,4 +61,6 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+    implementation 'android.arch.persistence.room:runtime:1.1.1'
+    annotationProcessor 'android.arch.persistence.room:compiler:1.1.1'
 }
