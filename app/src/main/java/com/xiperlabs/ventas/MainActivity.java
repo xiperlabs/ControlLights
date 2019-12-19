@@ -3,7 +3,6 @@ package com.xiperlabs.ventas;
 import android.os.Bundle;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
-
 import android.view.Gravity;
 import android.view.View;
 import androidx.navigation.NavController;
